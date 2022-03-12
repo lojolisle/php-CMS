@@ -31,6 +31,11 @@ include( 'admin/includes/functions.php' );
     ORDER BY date DESC';
   $result = mysqli_query( $connect, $query );
 
+  // get skills
+
+  $skillsQuery = 'SELECT * FROM `skills` ORDER BY confidence DESC;'
+  $skillsResult = mysqli_query( $connect, $skillsQuery );
+
   ?>
 
   <p>There are <?php echo mysqli_num_rows($result); ?> projects in the database!</p>
@@ -66,5 +71,17 @@ include( 'admin/includes/functions.php' );
 
   <?php endwhile; ?>
 
+  <hr>
+
+  <h2>Skills</h2>
+
+  <ul>
+  <?php while($skillRecord = mysqli_fetch_assoc($skillsResult)): ?>
+      <li>
+        <?php echo $skillRecord['logo'] . " ". $skillRecord['name'] . " ". $skillRecord['confidence']; ?>
+      </li>
+  <?php endwhile; ?>
+  </ul>
+ 
 </body>
 </html>
