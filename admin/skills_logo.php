@@ -39,8 +39,8 @@ if( isset( $_FILES['logo'] ) )
           break;      
       }
 
-    echo 'data:image/'.$type.';base64,'.base64_encode( file_get_contents( $_FILES['logo']['tmp_name'] ) ).'';
-    die();
+    // echo 'data:image/'.$type.';base64,'.base64_encode( file_get_contents( $_FILES['logo']['tmp_name'] ) ).'';
+    // die();
 
       $query = 'UPDATE skills SET
         logo = "data:image/'.$type.';base64,'.base64_encode( file_get_contents( $_FILES['logo']['tmp_name'] ) ).'"

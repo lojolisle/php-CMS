@@ -80,7 +80,7 @@ if( isset( $_POST['title'] ) )
   <label for="type">Type:</label>
   <?php
   
-  $values = array( 'Website', 'Graphic Design' );
+  $values = array( 'Website', 'Graphic Design', 'App' );
   
   echo '<select name="type" id="type">';
   foreach( $values as $key => $value )

@@ -33,7 +33,7 @@ include( 'admin/includes/functions.php' );
 
   // get skills
 
-  $skillsQuery = 'SELECT * FROM `skills` ORDER BY confidence DESC;'
+  $skillsQuery = 'SELECT * FROM `skills` ORDER BY confidence DESC;' ;
   $skillsResult = mysqli_query( $connect, $skillsQuery );
 
   ?>
