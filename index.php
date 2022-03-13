@@ -75,13 +75,15 @@ include( 'admin/includes/functions.php' );
 
   <h2>Skills</h2>
 
-  <ul>
-  <?php while($skillRecord = mysqli_fetch_assoc($skillsResult)): ?>
-      <li>
-        <?php echo $skillRecord['logo'] . " ". $skillRecord['name'] . " ". $skillRecord['confidence']; ?>
-      </li>
-  <?php endwhile; ?>
-  </ul>
- 
+  <table>
+    <?php while($skillRecord = mysqli_fetch_assoc($skillsResult)): ?>
+      <tr>
+        <td><img src="admin/image.php?type=skill&id=<?php echo $skillRecord['id']; ?>&width=50&height=50"></td>
+        <td><?php echo $skillRecord['name']; ?> </td>
+        <td><?php echo $skillRecord['confidence'] . '%'; ?> </td>
+      </tr>  
+    <?php endwhile; ?>
+  </table>
+
 </body>
 </html>
