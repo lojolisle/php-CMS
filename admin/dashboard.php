@@ -26,6 +26,7 @@ include( 'includes/header.php' );
   <li>
     <a href="contact_requests.php">
       Contact Requests
+      <img src="icons/contact.svg" alt="Logout icon" height=35/>
     </a>
   </li>
   <li>
