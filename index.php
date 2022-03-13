@@ -85,5 +85,8 @@ include( 'admin/includes/functions.php' );
     <?php endwhile; ?>
   </table>
 
+  <?php
+  include('./contact.php');
+  ?>
 </body>
 </html>

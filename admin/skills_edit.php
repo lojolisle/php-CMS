@@ -72,7 +72,7 @@ if( isset( $_GET['id'] ) )
     
   <br>
   
-  <label for="url">URL:</label>
+  <label for="url">Reference URL:</label>
   <input type="text" name="url" id="url" value="<?php echo htmlentities( $record['url'] ); ?>">
     
   <br>

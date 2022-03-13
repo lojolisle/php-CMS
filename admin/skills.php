@@ -36,7 +36,7 @@ $result = mysqli_query( $connect, $query );
     <th></th>
     <th align="center">ID</th>
     <th align="left">Name</th>
-    <th align="center">URL</th>
+    <th align="center">Reference URL</th>
     <th align="center">Confidence</th>
     <th></th>
     <th></th>

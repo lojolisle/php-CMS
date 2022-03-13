@@ -46,7 +46,7 @@ if( isset( $_POST['name'] ) )
     
   <br>
   
-  <label for="url">URL:</label>
+  <label for="url">Reference URL:</label>
   <input type="text" name="url" id="url">
   
   <br>
