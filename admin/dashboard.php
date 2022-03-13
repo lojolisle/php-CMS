@@ -30,7 +30,7 @@ include( 'includes/header.php' );
     </a>
   </li>
   <li>
-    <a href="users.php" class="dashboard-link"
+    <a href="users.php" class="dashboard-link">
       <span>Manage Users</span>
       <img src="icons/users.svg" alt="Users icon" height=35/>
     </a>
