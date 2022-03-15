@@ -4,7 +4,9 @@ include( 'admin/includes/database.php' );
 include( 'admin/includes/config.php' );
 include( 'admin/includes/functions.php' );
 
+$user_id = 1;
 ?>
+
 <!doctype html>
 <html>
 <head>
