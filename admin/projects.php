@@ -25,12 +25,15 @@ if( isset( $_GET['delete'] ) )
 
 $query = 'SELECT *
   FROM projects
+  WHERE user_id='. mysqli_real_escape_string($connect, $_SESSION['id']).'
   ORDER BY date DESC';
 $result = mysqli_query( $connect, $query );
 
 ?>
 
 <h2>Manage Projects</h2>
+
+<p><a href="projects_add.php"><i class="fas fa-plus-square"></i> Add Project</a></p>
 
 <table>
   <tr>
@@ -65,9 +68,6 @@ $result = mysqli_query( $connect, $query );
     </tr>
   <?php endwhile; ?>
 </table>
-
-<p><a href="projects_add.php"><i class="fas fa-plus-square"></i> Add Project</a></p>
-
 
 <?php
 
