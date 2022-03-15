@@ -18,11 +18,13 @@ if( isset( $_POST['name'] ) )
     $query = 'INSERT INTO skills (
         name,
         url,
-        confidence
+        confidence,
+        user_id
       ) VALUES (
          "'.mysqli_real_escape_string( $connect, $_POST['name'] ).'",
          "'.mysqli_real_escape_string( $connect, $_POST['url'] ).'",
-         "'.mysqli_real_escape_string( $connect, $_POST['confidence'] ).'"
+         "'.mysqli_real_escape_string( $connect, $_POST['confidence'] ).'",
+         "'.mysqli_real_escape_string( $connect, $_SESSION['id'] ).'"
       )';
      
     mysqli_query( $connect, $query );

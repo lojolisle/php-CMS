@@ -24,12 +24,15 @@ if( isset( $_GET['delete'] ) )
 
 $query = 'SELECT *
   FROM skills
+  WHERE user_id='. mysqli_real_escape_string($connect, $_SESSION['id']).'
   ORDER BY name DESC';
 $result = mysqli_query( $connect, $query );
 
 ?>
 
 <h2>Manage Skills</h2>
+
+<p><a href="skills_add.php"><i class="fas fa-plus-square"></i> Add Skill</a></p>
 
 <table>
   <tr>
@@ -62,9 +65,6 @@ $result = mysqli_query( $connect, $query );
     </tr>
   <?php endwhile; ?>
 </table>
-
-<p><a href="skills_add.php"><i class="fas fa-plus-square"></i> Add Skill</a></p>
-
 
 <?php
 
