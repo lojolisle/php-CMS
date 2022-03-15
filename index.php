@@ -30,12 +30,13 @@ $user_id = 1;
 
   $query = 'SELECT *
     FROM projects
+    WHERE user_id='.$user_id.'
     ORDER BY date DESC';
   $result = mysqli_query( $connect, $query );
 
   // get skills
 
-  $skillsQuery = 'SELECT * FROM `skills` ORDER BY confidence DESC;' ;
+  $skillsQuery = 'SELECT * FROM `skills` WHERE user_id='.$user_id.' ORDER BY confidence DESC;' ;
   $skillsResult = mysqli_query( $connect, $skillsQuery );
 
   ?>
