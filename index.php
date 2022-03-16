@@ -4,7 +4,9 @@ include( 'admin/includes/database.php' );
 include( 'admin/includes/config.php' );
 include( 'admin/includes/functions.php' );
 
-$user_id = 1;
+// pass user id in query param
+// example index.php?user=1
+$user_id = $_REQUEST['user'];
 ?>
 
 <!doctype html>
